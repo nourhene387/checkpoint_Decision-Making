@@ -43,7 +43,7 @@ function Ticket_Pricing(age) {
     return price;
 }
 
-console.log(Ticket_Pricing(13));
+console.log(Ticket_Pricing(12));
 /*************************Weather Clothing Adviser********************** */
 function clothing_advise() {
     let temperature = prompt("Please enter the current temperature", "20C");
@@ -84,22 +84,35 @@ function clothing_advise() {
 
 }
 /**************************Fibonacci Sequence:*************************** */
-function Fibonacci(number) {
+/*function Fibonacci(number) {
  let output=[0,1];
     if (number===0) {
-    output= [];  
+    return ;  
     }else if (number===1) {
-       output=output[0]; 
+       return
+        output=output[0]; 
     }else{
-        for (let i = 2; i<number; i++) {
-            output[i]=output[i-1]+output[i-2];
-            
-        }
+       output=Fibonacci(number-1)+Fibonacci(number-2)
+       
     }
     return output 
     
 }
-console.log(Fibonacci(10));
+console.log(Fibonacci(10));*/
+function fibonacci(n) {
+    // Base cases
+    if (n <= 1) return n;
+    
+    // Recursive case
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+  
+  // Test the function
+  console.log(fibonacci(0));  // 0
+  console.log(fibonacci(1));  // 1
+  console.log(fibonacci(2));  // 1
+  console.log(fibonacci(5));  // 5
+  console.log(fibonacci(10)); // 55
 /************************Palindrome Checker ************************** */
 function Palindrome(str) {
     const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
